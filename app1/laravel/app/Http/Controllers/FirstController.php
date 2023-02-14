@@ -20,4 +20,27 @@ class FirstController extends Controller
 
         return view('contactus')->with('name',$name)->with('email',$email)->with('mobile',$mobile);
     }
+    public function contactus2(Request $request,$name='',$email='',$mobile='')
+    {
+        $values = [
+            'name' => $name,
+            'email' => $email,
+            'mobile' => $mobile,
+        ];
+
+        return view('contactus2')->with('value',$values);
+    }
+
+    public function contactus3(Request $request,$name='',$email='',$mobile='')
+    {
+        return view('contactus3',[
+            'name' => $name,
+            'email' => $email,
+            'mobile' => $mobile,
+        ]);
+    }
+    public function contactus4(Request $request,$name='',$email='',$mobile='')
+    {
+        return view('contactus4',compact('name','email','mobile'));
+    }
 }

@@ -9,9 +9,10 @@
 <body>
     <h1>Passing data from controller to views</h1>
     <ul>
-        <li>Name :- {{$name}}</li>
-        <li>Email :- {{$email}}</li>
-        <li>mobile :- {{$mobile}}</li>
+        <li>Name :- {{$value['name']}}</li>
+        <li>Email :- {{$value['email']}}</li>
+        <li>mobile :- {{$value['mobile']}}</li>
+        
     </ul>
 </body>
 </html>

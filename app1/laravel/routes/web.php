@@ -39,3 +39,6 @@ Route::get('/second','App\Http\Controllers\FirstController@index');
 Route::get('/third',[FirstController::class,'third']);
 Route::get('/fourth',[FirstController::class,'fourth']);
 Route::get('/contactus/{name}/{email}/{mobile}',[FirstController::class,'contactus']);
+Route::get('/contactus2/{name?}/{email?}/{mobile?}',[FirstController::class,'contactus2']);
+Route::get('/contactus3/{name?}/{email?}/{mobile?}',[FirstController::class,'contactus3']);
+Route::get('/contactus4/{name?}/{email?}/{mobile?}',[FirstController::class,'contactus4']);
