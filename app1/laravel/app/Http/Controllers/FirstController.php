@@ -43,4 +43,8 @@ class FirstController extends Controller
     {
         return view('contactus4',compact('name','email','mobile'));
     }
+    public function child(Request $request)
+    {
+        return view('child');
+    }
 }

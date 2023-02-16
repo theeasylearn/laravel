@@ -12,7 +12,6 @@
         <li>Name :- {{$value['name']}}</li>
         <li>Email :- {{$value['email']}}</li>
         <li>mobile :- {{$value['mobile']}}</li>
-        
     </ul>
 </body>
 </html>
