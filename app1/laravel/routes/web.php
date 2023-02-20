@@ -43,3 +43,4 @@ Route::get('/contactus2/{name?}/{email?}/{mobile?}',[FirstController::class,'con
 Route::get('/contactus3/{name?}/{email?}/{mobile?}',[FirstController::class,'contactus3']);
 Route::get('/contactus4/{name?}/{email?}/{mobile?}',[FirstController::class,'contactus4']);
 Route::get('/child',[FirstController::class,'child']);
+Route::get('/child2',[FirstController::class,'child2']);
