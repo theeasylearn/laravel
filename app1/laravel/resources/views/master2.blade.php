@@ -84,6 +84,12 @@
                 </div>
                 
             </div>
+            <div class="row">
+                <div class="col-12">
+                    <br>
+                    <br>
+                </div>
+            </div>
         </div>
     @show
 

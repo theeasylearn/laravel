@@ -51,4 +51,8 @@ class FirstController extends Controller
     {
         return view('child2');
     }
+    public function child3(Request $request)
+    {
+        return view('child3');
+    }
 }

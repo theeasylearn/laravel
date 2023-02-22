@@ -12,6 +12,7 @@
     </div>
 @stop
 @section('content')
+
 @endsection
 @section('footer')
     @parent
