@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAdmin extends Migration
+class CreateCart extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateAdmin extends Migration
      */
     public function up()
     {
-        Schema::create('admin', function (Blueprint $table) {
-            //
+        Schema::create('cart', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('email',255);
-            $table->string('password',255);
-            $table->timestamp('created_at');
+            $table->integer('productid');
+            $table->integer('customerid');
+            $table->integer('quantity');
+            $table->integer('price');
+            $table->integer('billid');
         });
     }
 
@@ -29,7 +30,7 @@ class CreateAdmin extends Migration
      */
     public function down()
     {
-        Schema::table('admin', function (Blueprint $table) {
+        Schema::table('cart', function (Blueprint $table) {
             //
         });
     }
