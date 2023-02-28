@@ -19,7 +19,7 @@ class CreateCart extends Migration
             $table->integer('customerid');
             $table->integer('quantity');
             $table->integer('price');
-            $table->integer('billid');
+            $table->integer('billid'); //billid=0
         });
     }
 

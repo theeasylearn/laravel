@@ -13,8 +13,15 @@ class CreateBill extends Migration
      */
     public function up()
     {
-        Schema::table('bill', function (Blueprint $table) {
-            //
+        Schema::create('bill', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('customerid');
+            $table->string('fullname',255);
+            $table->string('address1',255);
+            $table->string('address2',255);
+            $table->string('city',32);
+            $table->string('pincode',8);
+            $table->string('mobile',10);
         });
     }
 
