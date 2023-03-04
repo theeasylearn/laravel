@@ -29,8 +29,6 @@ class CreateCustomer extends Migration
      */
     public function down()
     {
-        Schema::table('customer', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('customer');
     }
 }

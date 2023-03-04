@@ -32,8 +32,6 @@ class CreateProduct extends Migration
      */
     public function down()
     {
-        Schema::table('product', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('product');
     }
 }

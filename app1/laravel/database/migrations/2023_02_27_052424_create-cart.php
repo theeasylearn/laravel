@@ -30,8 +30,6 @@ class CreateCart extends Migration
      */
     public function down()
     {
-        Schema::table('cart', function (Blueprint $table) {
-            //
-        });
+        Schema::drop('cart');
     }
 }
