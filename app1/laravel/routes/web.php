@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\MathController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,19 +11,13 @@ use App\Http\Controllers\FirstController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/first',function(){
     return '<h1>first route</h1>';
 });
-
-
-
 //get post put delete 
 Route::get("/table/{number?}",function($number=2){
     $base = $number;
@@ -45,3 +40,4 @@ Route::get('/contactus4/{name?}/{email?}/{mobile?}',[FirstController::class,'con
 Route::get('/child',[FirstController::class,'child']);
 Route::get('/child2',[FirstController::class,'child2']);
 Route::get('/child3',[FirstController::class,'child3']);
+Route::get('/maths',[MathController::class,'index']);
