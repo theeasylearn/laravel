@@ -41,3 +41,4 @@ Route::get('/child',[FirstController::class,'child']);
 Route::get('/child2',[FirstController::class,'child2']);
 Route::get('/child3',[FirstController::class,'child3']);
 Route::get('/maths',[MathController::class,'index']);
+Route::post('/calculate',[MathController::class,'calculate']);

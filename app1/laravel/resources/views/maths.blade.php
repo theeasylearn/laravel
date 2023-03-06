@@ -19,28 +19,29 @@ Math Calculator
         <div class="col-lg-6 offset-lg-3">
             <div class="card">
                 <div class="card-body">
-                    <form action="" method=post>
+                    <form action="calculate" method=post>
+                        @csrf
                         <div class="mb-3">
-                            <input name="num1" class='form-control' placeholder="First number" />
+                            <input type="number" name="num1" class='form-control' placeholder="First number" />
                         </div>
                         <div class="mb-3">
-                            <input name="num2" class='form-control' placeholder="Second number" />
+                            <input type="number" name="num2" class='form-control' placeholder="Second number" />
                         </div>
                         <div class="fw-bold mb-3">Select opration</div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="operation" id="addition">
+                            <input class="form-check-input" type="radio" name="operation" id="addition" value="1">
                             <label class="form-check-label" for="addition">Addition</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="operation" id="substraction">
+                            <input class="form-check-input" type="radio" name="operation" id="substraction" value="2">
                             <label class="form-check-label" for="substraction">Substraction</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="operation" id="multiplication">
+                            <input class="form-check-input" type="radio" name="operation" id="multiplication" value="3">
                             <label class="form-check-label" for="multiplication">Multiplication</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="operation" id="division">
+                            <input class="form-check-input" type="radio" name="operation" id="division" value="4">
                             <label class="form-check-label" for="division">Division</label>
                         </div>
                         <div class="mt-3 d-grid">
