@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\MathController;
+use App\Http\Controllers\RegisterController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,3 +43,5 @@ Route::get('/child2',[FirstController::class,'child2']);
 Route::get('/child3',[FirstController::class,'child3']);
 Route::get('/maths',[MathController::class,'index']);
 Route::post('/calculate',[MathController::class,'calculate']);
+Route::get('/register',[RegisterController::class,'register']);
+Route::post('/register',[RegisterController::class,'validate_input']);
