@@ -27,7 +27,7 @@ this is title of the child page
                             <div class="col">
                                 <div class="form-floating mb-3">
                                     <input type="text" 
-                                    class="form-control @error('firstname') is-invalid @enderror" id="firstname" name="firstname" placeholder="First name">
+                                    class="form-control @error('firstname') is-invalid @enderror" id="firstname" name="firstname" placeholder="First name" value="{{ old('firstname') }}">
                                     <label for="floatingInput">First Name</label>
                                     @error('firstname')
                                        <div class="alert alert-danger mt-2">
@@ -40,7 +40,7 @@ this is title of the child page
                             <div class="col">
                                 <div class="form-floating mb-3">
                                     <input type="text" 
-                                    class="form-control @error('lastname') is-invalid @enderror" id="lastname" name="lastname" placeholder="last name">
+                                    class="form-control @error('lastname') is-invalid @enderror" id="lastname" name="lastname" placeholder="last name" value="{{ old('lastname') }}">
                                     <label for="lastname">Last name</label>
                                     @error('lastname')
                                        <div class="alert alert-danger mt-2">
