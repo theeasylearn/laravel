@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\MathController;
 use App\Http\Controllers\RegisterController;
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +14,7 @@ use App\Http\Controllers\RegisterController;
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
+
 */
 Route::get('/', function () {
     return view('welcome');
@@ -45,3 +48,24 @@ Route::get('/maths',[MathController::class,'index']);
 Route::post('/calculate',[MathController::class,'calculate']);
 Route::get('/register',[RegisterController::class,'register']);
 Route::post('/register',[RegisterController::class,'validate_input']);
+Route::get("/insert/{email}/{password}/{mobile}",function(Request $request)
+{
+    $data = array($request->email,$request->password,$request->mobile);
+    DB::insert("insert into customers (email,password,mobile) values (?,?,?)",$data);    
+});
+
+Route::get("/update/{email}/{password}/{mobile}/{id}",function(){
+    
+});
+
+Route::get("/delete/{id}",function(){
+    
+});
+
+Route::get("/select/",function(){
+    
+});
+
+Route::get("/any/",function(){
+    
+});
