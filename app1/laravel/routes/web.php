@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\MathController;
 use App\Http\Controllers\RegisterController;
-use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 /*
 |--------------------------------------------------------------------------
@@ -51,21 +51,28 @@ Route::post('/register',[RegisterController::class,'validate_input']);
 Route::get("/insert/{email}/{password}/{mobile}",function(Request $request)
 {
     $data = array($request->email,$request->password,$request->mobile);
-    DB::insert("insert into customers (email,password,mobile) values (?,?,?)",$data);    
+    DB::insert("insert into customer (email,password,mobile) values (?,?,?)",$data); 
+    echo "customers added";
 });
 
-Route::get("/update/{email}/{password}/{mobile}/{id}",function(){
-    
+Route::get("/update/{email}/{password}/{mobile}/{id}",function(Request $request){
+    $data = array($request->email,$request->password,$request->mobile,$request->id);
+    DB::update("update customer set email=?,password=?,mobile=? where id=?",$data);
+    echo "customers updated";
 });
 
-Route::get("/delete/{id}",function(){
-    
+Route::get("/delete/{id}",function(Request $request){
+    $data = array($request->id);
+    DB::delete("delete from customer where id=?",$data);
+    echo "customers delete";
 });
 
 Route::get("/select/",function(){
-    
+    $cusomters = DB::select("select * from customer");
+    echo json_encode($cusomters);
 });
 
 Route::get("/any/",function(){
-    
+    DB::statement("truncate table admin");
+    echo "admin table truncated";
 });
