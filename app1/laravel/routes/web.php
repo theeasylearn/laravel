@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
 use App\Http\Controllers\MathController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 /*
@@ -76,3 +77,5 @@ Route::get("/any/",function(){
     DB::statement("truncate table admin");
     echo "admin table truncated";
 });
+
+Route::get('/category',[CategoryController::class,'index']);
