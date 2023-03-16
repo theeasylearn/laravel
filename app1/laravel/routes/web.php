@@ -79,3 +79,6 @@ Route::get("/any/",function(){
 });
 
 Route::get('/category',[CategoryController::class,'index']);
+Route::get('/insertcategory',[CategoryController::class,'create_category']);
+Route::post('/insertcategory',[CategoryController::class,'insert_category']);
+Route::get('/deletecategory/{categoryid}',[CategoryController::class,'delete_category']);

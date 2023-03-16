@@ -14,12 +14,15 @@ this is title of the child page
 @endsection
 @section('content')
 <div class="container mt-5">
-    <div class="row mb-2">
+    <div class="row">
         <div class="col-12 text-end">
-            <a href="insertcategory" class='btn btn-primary'>Add new Category</a>d
+            <a href="/insertcategory" class='btn btn-primary'>Add new category</a>
         </div>
     </div>
     <div class="row">
+        <div class="col-12 my-3 p-3 text-primary text-center">
+            {{(isset($message)== true ? $message : '')}}
+        </div>
         <div class="col-12">
             <table class="table table-bordered table-striped" width='80%' align="center">
                 <thead>
@@ -38,7 +41,7 @@ this is title of the child page
                         <td>{{$row->detail}}</td>
                         <td width='20%' align="center"> 
                             <a class="btn btn-warning" href="/editcategory">Edit </a> 
-                            <a class="btn btn-danger" href="/deletecategory">Delete </a>
+                            <a class="btn btn-danger" href="/deletecategory/{{$row->id}}">Delete </a>
                         </td>
                     </tr>
                     @endforeach
