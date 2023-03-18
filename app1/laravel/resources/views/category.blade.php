@@ -40,7 +40,7 @@ this is title of the child page
                         <td>{{$row->title}}</td>
                         <td>{{$row->detail}}</td>
                         <td width='20%' align="center"> 
-                            <a class="btn btn-warning" href="/editcategory">Edit </a> 
+                            <a class="btn btn-warning" href="/editcategory/{{$row->id}}">Edit </a> 
                             <a class="btn btn-danger" href="/deletecategory/{{$row->id}}">Delete </a>
                         </td>
                     </tr>

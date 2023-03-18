@@ -36,5 +36,20 @@ class CategoryController extends Controller
         $table = DB::table("category")->get(['id','title','detail']);
         return view('category')->with('categories',$table)->with('message','category added successfully');
     }
-    
+    public function edit_category(Request $request,$categoryid)
+    {
+        //select * from category where id = $categoryid
+        $table = DB::table("category")->where('id',$categoryid)->get(['id','title','detail']);
+        $row = $table[0];
+        return view('edit-category')->with('category',$row);
+    }
+    public function update_category(Request $request)
+    {
+        DB::table("category")->where('id',$request->input('categoryid'))->update([
+            'title' => $request->input('title'),
+            'detail'=> $request->input('detail'),
+        ]);
+        $table = DB::table("category")->get(['id','title','detail']);
+        return view('category')->with('categories',$table)->with('message','category updated successfully');
+    }
 }
