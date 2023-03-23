@@ -6852,14 +6852,14 @@ h6 {
 /**********************footer part css*******************/
 /* line 2, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_footer.scss */
 .footer_part {
+  padding: 20px 0 25px;
   background-color: #000;
-  padding: 140px 0 25px;
 }
 
 @media (max-width: 991px) {
   /* line 2, /Applications/MAMP/htdocs/palash/cl/august 2019/202. Shop/202 shop html/sass/_footer.scss */
   .footer_part {
-    padding: 70px 0 25px;
+    padding: 20px 0 25px;
   }
 }
 
