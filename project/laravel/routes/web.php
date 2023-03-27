@@ -12,3 +12,9 @@ Route::get('/customer-template', function () {
     return view('customer-template');
 });
 
+Route::get('/admin-login', function () {
+    return view('admin-login');
+});
+
+
+
