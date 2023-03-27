@@ -15,6 +15,3 @@ Route::get('/customer-template', function () {
 Route::get('/admin-login', function () {
     return view('admin-login');
 });
-
-
-
