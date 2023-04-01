@@ -23,6 +23,11 @@
                 <span class="align-middle">Home</span>
             </a>
         </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" href="/admin-category">
+                <span class="align-middle">Category Management</span>
+            </a>
+        </li>
     </ul>
 </div>
 </nav>
