@@ -28,6 +28,11 @@
                 <span class="align-middle">Category Management</span>
             </a>
         </li>
+        <li class="sidebar-item">
+            <a class="sidebar-link" href="/admin-product">
+                <span class="align-middle">Product Management</span>
+            </a>
+        </li>
     </ul>
 </div>
 </nav>

@@ -42,8 +42,31 @@ Route::post('/admin-create-category', function () {
     // return view('admin-create-category');
 });
 
-
 Route::get('/admin-delete-category', function () {
     echo "category delete.....";
     //return view('admin-delete-category');
 });
+
+Route::get('/admin-product', function () {
+    return view('admin-product');
+});
+
+Route::get('/admin-create-product', function () {
+    return view('admin-create-product');
+});
+
+Route::post('/admin-create-product', function () {
+    echo "product inserted.....";
+    // return view('admin-create-category');
+});
+
+Route::get('/admin-edit-product', function () {
+    return view('admin-edit-product');
+});
+
+Route::post('/admin-edit-product', function () {
+    echo "product edit.....";
+    // return view('admin-create-category');
+});
+
+
